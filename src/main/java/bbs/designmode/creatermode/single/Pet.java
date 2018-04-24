@@ -1,4 +1,4 @@
-package bbs.designMode.createrMode.single;
+package bbs.designmode.creatermode.single;
 
 /**
  * @author 73598.

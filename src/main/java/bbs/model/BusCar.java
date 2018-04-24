@@ -10,12 +10,11 @@ import lombok.Data;
  */
 @Data
 public class BusCar extends Car {
-    public BusCar(String name) {
-        super.name = name;
+    public BusCar(String name,String  factoryName) {
+        super.setCarpropeties(name,factoryName);
     }
-
     @Override
     public void run() {
-        System.out.println(name +": 20 people up then  run");
+        System.out.println("everybody ready ? this is a bus named "+ name + " created by " +factoryName+" let's have fun");
     }
 }

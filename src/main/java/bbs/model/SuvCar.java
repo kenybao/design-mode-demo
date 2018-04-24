@@ -8,12 +8,16 @@ import bbs.interfaces.Car;
  * @Time 11:05.
  */
 public class SuvCar extends Car {
-    public SuvCar(String name) {
-        super.name = name;
+    /**
+     * suv 特性 ：爬坡
+     */
+    private Boolean Climb;
+    public SuvCar(String name,String  factoryName) {
+        super.setCarpropeties(name,factoryName);
     }
 
     @Override
     public void run() {
-        System.out.println(name +" run");
+        System.out.println("we will go climbing today ,the car named "+name+" is made by "+factoryName+" lets run");
     }
 }

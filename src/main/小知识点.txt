@@ -1,0 +1,3 @@
+1.表达式竟然有值 (a = b = 2) == 2 为true
+2.idea 展示uml图 ctrl + alt +u 右键可显示方法成员变量等 可以更改layout及自适应 可导出等功能
+3.idea 调试技巧  含多线程 单步反方向等 http://www.cnblogs.com/yjmyzz/p/idea-advanced-debug-tips.html mark下

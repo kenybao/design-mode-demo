@@ -11,7 +11,15 @@ import lombok.Data;
  */
 @Data
 public abstract class Car {
+    public  static final  String CAR_TYPE_SUV = "SUV";
+    public  static final  String CAR_TYPE_BUS = "BUS";
     protected String name = null;
+    protected String factoryName = "default factoryName";
     protected Wheel wheel = null;
+
+    protected void setCarpropeties(String name, String factoryName) {
+         this.name = name;
+         this.factoryName = factoryName;
+    }
     public abstract void run();
 }
