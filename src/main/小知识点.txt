@@ -1,3 +1,5 @@
 1.表达式竟然有值 (a = b = 2) == 2 为true
 2.idea 展示uml图 ctrl + alt +u 右键可显示方法成员变量等 可以更改layout及自适应 可导出等功能
 3.idea 调试技巧  含多线程 单步反方向等 http://www.cnblogs.com/yjmyzz/p/idea-advanced-debug-tips.html mark下
+4.类设计的原则之一 单一职责原则(SRP) 就一个类而言，应该仅有一个引起它变化的原因。”也就是说，不要把变化原因各不相同的职责放在一起，因为不同的变化会影响到不相干的职责。再通俗一点地说就是，不该你管的事情你不要管，管好自己的事情就可以了，多管闲事害了自己也害了别人摘自http://www.cnblogs.com/sevenyuan/archive/2010/03/05/1678730.html
+5.

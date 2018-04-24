@@ -1,4 +1,4 @@
-package bbs.designmode.creatermode.factory;
+package bbs.designmode.creatermode.factorymethodpattern;
 
 import bbs.interfaces.Car;
 import lombok.Data;
@@ -22,5 +22,10 @@ public abstract class AbstractCarFactory {
      * 工厂企业名称
      */
     protected String factoryName;
-    abstract Car createCar(String name);
+
+    /**
+     * 工厂方法模式 每个方法返回一个具体对象
+     * @return
+     */
+    abstract Car createCar();
 }

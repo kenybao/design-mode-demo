@@ -1,6 +1,6 @@
 package bbs.designmode.creatermode.simplefactory;
 
-import bbs.designmode.creatermode.factory.AbstractCarFactory;
+import bbs.designmode.creatermode.factorymethodpattern.AbstractCarFactory;
 import bbs.interfaces.Car;
 import bbs.model.BusCar;
 import bbs.model.SuvCar;
