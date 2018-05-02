@@ -12,4 +12,6 @@ public class Wheel {
     private String color ;
     private String size;
 
+    public Wheel() {
+    }
 }

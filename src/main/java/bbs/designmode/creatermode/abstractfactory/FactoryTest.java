@@ -21,6 +21,7 @@ public class FactoryTest {
         bmwFactory.createBus().run();
         benzFactory.createBus().run();
         //客户想要 电池 欸 在父工厂接口内添加一个 我想要电池的接口 下面两个子类厂商添加不同的电池接口的实现
+        // 当然也可以添加一个新的子工厂实现类 实现三个接口
         bmwFactory.createBattery().run();
         benzFactory.createBattery().run();
 

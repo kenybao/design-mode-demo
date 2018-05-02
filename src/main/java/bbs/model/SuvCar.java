@@ -12,12 +12,15 @@ public class SuvCar extends Car {
      * suv 特性 ：爬坡
      */
     private Boolean Climb;
+
+    public SuvCar(){}
+
     public SuvCar(String name,String  factoryName) {
         super.setCarpropeties(name,factoryName);
     }
 
     @Override
     public void run() {
-        System.out.println("we will go climbing today ,the car named "+name+" is made by "+factoryName+" lets run");
+        System.out.println(toString());
     }
 }
