@@ -9,10 +9,27 @@ import org.junit.jupiter.api.Test;
  */
 public class ClassAdapterTest {
     @Test
-    public void testAdapter(){
-        //Target期待调用Request方法，而Adaptee并没有（这就是所谓的不兼容了）
+    public void testAdapter() throws Exception {
+        //Target期待调用charge方法，而ChineseAdapter并没有（这就是所谓的不兼容了）
 //        Target.requst??
-        ClassAdapter adapter = new ClassAdapter();
-        adapter.request();
+        LETV letv = new LETV();
+        USATV usatv = new USATV();
+        Target chinaTarget = new ChineseAdapter();
+        chinaTarget.charge(letv);
+        System.out.println("--------------");
+        //异常
+        try {
+            chinaTarget.charge(usatv);
+        }catch(Exception e){
+//            e.printStackTrace();
+        }
+        Target usaTarget  = new ClassAdapter();
+        usaTarget.charge(usatv);
+        System.out.println("--------------");
+
+        usaTarget = new ObjectAdapter(new 变压器());
+        usaTarget.charge(usatv);
+        System.out.println("--------------");
+        usaTarget.charge(letv);
     }
 }

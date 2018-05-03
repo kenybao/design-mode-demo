@@ -6,5 +6,9 @@ package bbs.designmode.structmode.adapters;
  * @Time 10:28.
  */
 public interface Target {
-   void request() throws Exception;
+   /**
+    * 充电
+    * @throws Exception
+    */
+   void charge(ElectricalAppliance electricalAppliance) throws Exception;
 }

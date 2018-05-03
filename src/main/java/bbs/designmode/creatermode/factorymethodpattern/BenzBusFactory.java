@@ -16,6 +16,7 @@ public class BenzBusFactory extends AbstractCarFactory {
     public BenzBusFactory() {
         this.factoryName = FACTORY_NAME_BENZ;
     }
+
     /**
      * 工厂方法模式 每个方法返回一个具体对象
      * 原简单工厂方法中有具体判断逻辑，现工厂逻辑分发到各个子工厂逻辑中
@@ -23,7 +24,7 @@ public class BenzBusFactory extends AbstractCarFactory {
      * @return
      */
     @Override
-    Car createCar() {
+    public Car createCar() {
         return new SuvCar(Car.CAR_TYPE_BUS, factoryName);
     }
 }

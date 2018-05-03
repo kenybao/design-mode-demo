@@ -23,7 +23,7 @@ public class BmwSuvFactory extends AbstractCarFactory {
      * @return
      */
     @Override
-    Car createCar() {
+    public Car createCar() {
         return new BusCar(Car.CAR_TYPE_SUV,factoryName);
     }
 }
