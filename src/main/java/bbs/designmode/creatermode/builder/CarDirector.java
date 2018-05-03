@@ -13,9 +13,6 @@ public class CarDirector {
     }
 
     public void direct(){
-        carBuilder.buildCarBody();
-        carBuilder.buildCarWheel();
-        carBuilder.buildBattery();
-        carBuilder.build().run();
+        carBuilder.buildCarBody().buildCarWheel().buildBattery().build().run();
     }
 }
