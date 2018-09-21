@@ -7,6 +7,14 @@ import org.springframework.util.Assert;
  * @author 73598.
  * @Date 2018/5/3 0003.
  * @Time 10:31.
+ *
+ * 冲突：Target期待调用Request方法，而Adaptee并没有（这就是所谓的不兼容了）。
+解决方案：为使Target能够使用Adaptee类里的SpecificRequest方法，故提供一个中间环节Adapter类（继承Adaptee & 实现Target接口），把Adaptee的API与Target的API衔接起来（适配）。
+
+---------------------
+
+本文来自 Carson_Ho 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/carson_ho/article/details/54910430?utm_source=copy
+ *
  */
 public class AdapterTest {
     @Test
@@ -40,14 +48,14 @@ public class AdapterTest {
     @Test
     public void testAdapter4() throws Exception {
         LETV tv = new LETV();
-        Target usaTarget = new GeneralAdapter(new 通用变压器());
+        Target usaTarget = new GeneralAdapter();
         Assert.isTrue( usaTarget.charge(tv,VolTageEnum.CHINA),"");
         Assert.isTrue( usaTarget.charge(tv,VolTageEnum.USA).equals(Boolean.FALSE),"");
     }
     @Test
     public void testAdapter5() throws Exception {
         USATV tv = new USATV();
-        Target usaTarget = new GeneralAdapter(new 通用变压器());
-        Assert.isTrue( usaTarget.charge(tv,VolTageEnum.USA),"");
+        Assert.isTrue( tv.echarge(VolTageEnum.CHINA.getVoltage()).equals(Boolean.FALSE),"");
+        ChinaTarget usaTarget = new ChinaAdapter();
     }
 }

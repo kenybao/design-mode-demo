@@ -10,7 +10,7 @@ package bbs.designmode.structmode.adapters;
  */
 public class ChinaAdapter extends 中国变压器 implements ChinaTarget {
 
-    //目标类 中国变压器 没有充电 方法 但是有specificrequst方法 相当于 adapter类做了一层包装
+    //目标类 原来的适配器 只能适配 中国电器 但是要 被通用的话  又不改变当前类的话只能通过适配器模式 ,继承此类 实现target
     @Override
     public Boolean chinaCharge(ElectricalAppliance electricalAppliance) {
         return electricalAppliance.echarge(super._110to220(electricalAppliance.getVoltage()));

@@ -6,12 +6,8 @@ package bbs.designmode.structmode.adapters;
  * @Time 10:40.
  * 通用适配器接口
  */
-public class GeneralAdapter implements Target {
-    private 变压器接口 变压器接口;
+public class GeneralAdapter extends ChinaAdapter implements Target {
 
-    public GeneralAdapter(变压器接口 变压器接口) {
-        this.变压器接口 = 变压器接口;
-    }
     /**
      * 充电
      *
@@ -21,8 +17,10 @@ public class GeneralAdapter implements Target {
      */
     @Override
     public Boolean charge(ElectricalAppliance electricalAppliance, VolTageEnum volTageEnum) throws Exception {
-        if(变压器接口 == null)
-            throw new Exception("未初始化目标方法类");
-        return  electricalAppliance.echarge(变压器接口.changeVoltage(electricalAppliance.getVoltage(),volTageEnum.getVoltage()));
+        if(volTageEnum.getVoltage() != VolTageEnum.CHINA.getVoltage()){
+            return false;
+        }
+        return super.chinaCharge(electricalAppliance);
     }
+
 }
