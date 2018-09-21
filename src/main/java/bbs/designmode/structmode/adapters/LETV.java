@@ -7,15 +7,15 @@ import lombok.Data;
  * @author 73598.
  * @Date 2018/5/3 0003.
  * @Time 17:04.
+ * 中国电器
  */
 @Data
 public class LETV extends ElectricalAppliance {
     @Override
-    protected void echarge(Integer voltage) {
-        if(voltage != 220){
-            System.out.println("LETV输入电压非220v");
-            return;
+    protected Boolean echarge(Integer voltage) {
+        if (voltage != 220) {
+            return false;
         }
-        System.out.println("LETV 正在充电");
+        return true;
     }
 }

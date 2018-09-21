@@ -25,4 +25,5 @@
 如汉字 我 就是OxE6 Ox88 Ox91三个字节组成，经常看到的utf-8 bom 代表文件开头会有OxEF OxBB OxBF三个字节码
 意为Unicode签名BOM(Byte Order Mark)，无bom则开头无此三个字节。GBK编码，一个汉字占两个字节。
 参考https://www.cnblogs.com/leesf456/p/5317574.html 彻底理解字符编码
-13.
+13.java内存模型http://wiki.jikexueyuan.com/project/java-memory-model/basic.html
+14.大型网站架构https://blog.csdn.net/column/details/big-site-design.html

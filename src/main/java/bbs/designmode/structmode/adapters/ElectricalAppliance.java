@@ -11,14 +11,10 @@ import lombok.Data;
 @Data
 public abstract class ElectricalAppliance {
     /**
-     * 国内标准电压
-     */
-    public static final Integer VOITAGE = 220;
-    /**
      * 电器输入标准电压
      */
    protected Integer voltage = 220;
 
-   protected abstract void echarge(Integer voltage);
+   protected abstract Boolean echarge(Integer voltage);
 
 }

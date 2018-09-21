@@ -5,10 +5,10 @@ package bbs.designmode.structmode.adapters;
  * @Date 2018/5/3 0003.
  * @Time 10:28.
  */
-public interface Target {
+public interface ChinaTarget {
    /**
     * 充电
     * @throws Exception
     */
-   Boolean charge(ElectricalAppliance electricalAppliance,VolTageEnum volTageEnum) throws Exception;
+   Boolean chinaCharge(ElectricalAppliance electricalAppliance) throws Exception;
 }
